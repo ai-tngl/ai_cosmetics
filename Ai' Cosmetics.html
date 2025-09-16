@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ai' Cosmetics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
+
+  </head>
+  <body class="bg-pink-50 text-gray-800">
+    <header class="bg-white shadow sticky top-0 z-50">
+      <div class="container mx-auto flex flex-col md:flex-row items-center justify-center md:justify-between p-4">
+        <h1 class="text-2xl font-bold text-red-700 text-center w-full md:w-auto flex items-center justify-center gap-2">
+          <i class="fa-solid fa-gem text-red-700"></i>
+          Ai' Cosmetics
+        </h1>
+                <nav class="hidden md:flex space-x-6 md:ml-auto items-center text-red-400">
+        
+          <a href="#" class="hover:text-red-500 text-2xl" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
+          
+          <a href="#" class="hover:text-red-500 text-2xl" aria-label="Profile">
+            <i class="fa-solid fa-user"></i>
+          </a>
+          
+          <a href="#cart" class="hover:text-red-500 text-2xl" aria-label="Cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+        </nav>
+        </nav>
+      </div>
+    </header>
+
+    <!--Hero-->
+    <section
+      id="hero"
+      class="relative hero-slide text-center bg-cover bg-center overflow-hidden min-h-[450px] flex items-end"
+    >
+      <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+        <source src="https://v1.pinimg.com/videos/mc/720p/c9/34/c7/c934c7d2f9a73b97004e40fa402a5b26.mp4" type="video/mp4" />
+      </video>
+      
+      <div class="absolute inset-0 bg-red-800 bg-opacity-40 z-10"></div>
+      
+      <div class="relative z-20 max-w-md mb-10 ml-8 text-left">
+        <h2 class="text-xl md:text-2xl font-bold text-white mb-2">
+          Beauty Redefined
+        </h2>
+        <p class="text-sm md:text-base text-white mb-4">
+          Discover premium cosmetics crafted just for you.
+        </p>
+        <a
+          href="#products"
+          class="text-red-700 font-semibold px-5 py-2 rounded-full shadow-none hover:bg-pink-100 hover:text-pink-700 transition text-sm border border-white"
+        >
+          Shop Now
+        </a>
+      </div>
+    </section>
+
+    <!--Products-->
+    <section id="products" class="container mx-auto py-16 px-4">
+      <h3 class="text-3xl font-bold text-center mb-10 text-red-700">Our Products</h3>
+      <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      
+        <div class="bg-white p-4 shadow rounded-lg text-center relative">
+          <img src="https://i.pinimg.com/1200x/be/3f/96/be3f961612be01f17d5e4bf6376f0820.jpg" alt="Lipstick" class="w-full h-48 object-cover rounded transition-transform duration-300 hover:scale-105 hover:shadow-xl group" />
+          <h4 class="mt-4 font-semibold">Matte Lipstick</h4>
+          <p class="text-pink-600 font-bold">₱599</p>
+          <button class="absolute right-4 bottom-4 bg-red-100 hover:bg-red-200 text-red-700 hover:text-red-900 rounded-full p-3 shadow transition">
+            <i class="fa-solid fa-cart-plus"></i>
+          </button>
+        </div>
+        <div class="bg-white p-4 shadow rounded-lg text-center relative">
+          <img src="https://i.pinimg.com/736x/ce/bc/8e/cebc8e96ccce0736699102a11424a2d1.jpg" alt="Eyeshadow" class="w-full h-48 object-cover rounded transition-transform duration-300 hover:scale-105 hover:shadow-xl group" />
+          <h4 class="mt-4 font-semibold">Eyeshadow Palette</h4>
+          <p class="text-pink-600 font-bold">₱499</p>
+          <button class="absolute right-4 bottom-4 bg-red-100 hover:bg-red-200 text-red-700 hover:text-red-900 rounded-full p-3 shadow transition">
+            <i class="fa-solid fa-cart-plus"></i>
+          </button>
+        </div>
+        <div class="bg-white p-4 shadow rounded-lg text-center relative">
+          <img src="https://i.pinimg.com/736x/e8/6f/d7/e86fd7d5c89b72ada65192e3b19b6bae.jpg" alt="Foundation" class="w-full h-48 object-cover rounded transition-transform duration-300 hover:scale-105 hover:shadow-xl group" />
+          <h4 class="mt-4 font-semibold">Liquid Foundation</h4>
+          <p class="text-pink-600 font-bold">₱599</p>
+          <button class="absolute right-4 bottom-4 bg-red-100 hover:bg-red-200 text-red-700 hover:text-red-900 rounded-full p-3 shadow transition">
+            <i class="fa-solid fa-cart-plus"></i>
+          </button>
+        </div>
+        <div class="bg-white p-4 shadow rounded-lg text-center relative">
+          <img src="https://i.pinimg.com/736x/e8/a1/c4/e8a1c455297dc34e817942b6a42a74b2.jpg" alt="Blush" class="w-full h-48 object-cover rounded transition-transform duration-300 hover:scale-105 hover:shadow-xl group" />
+          <h4 class="mt-4 font-semibold">Peach Blush</h4>
+          <p class="text-pink-600 font-bold">₱349</p>
+          <button class="absolute right-4 bottom-4 bg-red-100 hover:bg-red-200 text-red-700 hover:text-red-900 rounded-full p-3 shadow transition">
+            <i class="fa-solid fa-cart-plus"></i>
+          </button>
+        </div>
+        <div class="bg-white p-4 shadow rounded-lg text-center relative">
+          <img src="https://i.pinimg.com/736x/69/8b/95/698b95ad2211566ce9424575abbdad10.jpg" alt="Mascara" class="w-full h-48 object-cover rounded transition-transform duration-300 hover:scale-105 hover:shadow-xl group " />
+          <h4 class="mt-4 font-semibold">Volume Mascara</h4>
+          <p class="text-pink-600 font-bold">₱549</p>
+          <button class="absolute right-4 bottom-4 bg-red-100 hover:bg-red-200 text-red-700 hover:text-red-900 rounded-full p-3 shadow transition">
+            <i class="fa-solid fa-cart-plus"></i>
+          </button>
+        </div>
+        <div class="bg-white p-4 shadow rounded-lg text-center relative">
+          <img src="https://i.pinimg.com/736x/cf/3d/3d/cf3d3d7cc6fc59e896a824478de8d96f.jpg" alt="Lip Gloss" class="w-full h-48 object-cover rounded transition-transform duration-300 hover:scale-105 hover:shadow-xl group" />
+          <h4 class="mt-4 font-semibold">Shiny Lip Gloss</h4>
+          <p class="text-pink-600 font-bold">₱299</p>
+          <button class="absolute right-4 bottom-4 bg-red-100 hover:bg-red-200 text-red-700 hover:text-red-900 rounded-full p-3 shadow transition">
+            <i class="fa-solid fa-cart-plus"></i>
+          </button>
+        </div>
+        <div class="bg-white p-4 shadow rounded-lg text-center relative">
+          <img src="https://i.pinimg.com/736x/b6/a9/86/b6a9869fdecf9254bf4f03013178dd62.jpg" alt="Highlighter" class="w-full h-48 object-cover rounded  transition-transform duration-300 hover:scale-105 hover:shadow-xl group" />
+          <h4 class="mt-4 font-semibold">Glow Highlighter</h4>
+          <p class="text-pink-600 font-bold">₱349</p>
+          <button class="absolute right-4 bottom-4 bg-red-100 hover:bg-red-200 text-red-700 hover:text-red-900 rounded-full p-3 shadow transition">
+            <i class="fa-solid fa-cart-plus"></i>
+          </button>
+        </div>
+        <div class="bg-white p-4 shadow rounded-lg text-center relative">
+          <img src="https://i.pinimg.com/736x/c8/f7/bf/c8f7bf638020ee0d2f92078caadd3067.jpg" alt="Concealer" class="w-full h-48 object-cover rounded  transition-transform duration-300 hover:scale-105 hover:shadow-xl group" />
+          <h4 class="mt-4 font-semibold">Full Coverage Concealer</h4>
+          <p class="text-pink-600 font-bold">₱449</p>
+          <button class="absolute right-4 bottom-4 bg-red-100 hover:bg-red-200 text-red-700 hover:text-red-900 rounded-full p-3 shadow transition">
+            <i class="fa-solid fa-cart-plus"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!--Best Sellers-->
+    <section id="bestsellers" class="bg-pink-100 py-16 px-4">
+      <h3 class="text-3xl font-bold text-center mb-10 text-red-700">Best Sellers</h3>
+      <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+        <div class="bg-white p-4 shadow rounded-lg text-center relative transition-transform duration-300 hover:scale-105 hover:shadow-xl group ">
+          <img src="https://i.pinimg.com/736x/29/fd/73/29fd73b99b545380a502230c806ef3b4.jpg" alt="Red Lipstick" class="w-full h-48 object-cover rounded" />
+          <h4 class="mt-4 font-semibold">Classic Red Lipstick</h4>
+          <p class="text-pink-600 font-bold">₱599</p>
+          <button class="absolute right-4 bottom-4 bg-red-100 hover:bg-red-200 text-red-700 hover:text-red-900 rounded-full p-3 shadow transition">
+            <i class="fa-solid fa-cart-plus"></i>
+          </button>
+        </div>
+        <div class="bg-white p-4 shadow rounded-lg text-center relative transition-transform duration-300 hover:scale-105 hover:shadow-xl group">
+          <img src="https://i.pinimg.com/1200x/22/5e/ea/225eeaec0647d73e772a18e2eecb1a08.jpg" alt="Nude Palette" class="w-full h-48 object-cover rounded" />
+          <h4 class="mt-4 font-semibold">Nude Eyeshadow Palette</h4>
+          <p class="text-pink-600 font-bold">₱799</p>
+          <button class="absolute right-4 bottom-4 bg-red-100 hover:bg-red-200 text-red-700 hover:text-red-900 rounded-full p-3 shadow transition">
+            <i class="fa-solid fa-cart-plus"></i>
+          </button>
+        </div>
+        <div class="bg-white p-4 shadow rounded-lg text-center relative transition-transform duration-300 hover:scale-105 hover:shadow-xl group">
+          <img src="https://i.pinimg.com/1200x/89/b3/0f/89b30f35c78376a6216317638bdd4244.jpg" alt="Make Up Brush" class="w-full h-48 object-cover rounded" />
+          <h4 class="mt-4 font-semibold">Make Up Brush</h4>
+          <p class="text-pink-600 font-bold">₱899</p>
+          <button class="absolute right-4 bottom-4 bg-red-100 hover:bg-red-200 text-red-700 hover:text-red-900 rounded-full p-3 shadow transition">
+            <i class="fa-solid fa-cart-plus"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!--Features -->
+    <section id="features" class="bg-red-100 py-16 px-4">
+      <h3 class="text-3xl font-bold text-center mb-10 text-red-700">Features</h3>
+      <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        
+        <div class="relative group rounded-lg overflow-hidden shadow-lg bg-white">
+          <img src="https://i.pinimg.com/736x/ce/bc/8e/cebc8e96ccce0736699102a11424a2d1.jpg" alt="Palette" class="w-full h-64 object-cover transition-opacity duration-300 group-hover:opacity-0" />
+          <video
+            src="https://v1.pinimg.com/videos/mc/720p/64/93/56/649356e3596bb49d27b18dfc57708456.mp4"
+            class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            autoplay
+            muted
+            loop
+            playsinline
+          ></video>
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-red-800/80 to-transparent p-4">
+            <h4 class="text-white font-semibold text-lg">Palettes</h4>
+          </div>
+        </div>
+        
+        <div class="relative group rounded-lg overflow-hidden shadow-lg bg-white">
+          <img src="https://i.pinimg.com/736x/ab/fc/43/abfc43fa7fa6f0963879ad198f1bb652.jpg" alt="Brushes" class="w-full h-64 object-cover transition-opacity duration-300 group-hover:opacity-0" />
+          <video
+            src="https://v1.pinimg.com/videos/mc/720p/b0/d3/ec/b0d3eca0cbb3b22dc04ab59fbfdb7f63.mp4"
+            class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            autoplay
+            muted
+            loop
+            playsinline
+          ></video>
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-red-800/80 to-transparent p-4">
+            <h4 class="text-white font-semibold text-lg">Make Up Brushes</h4>
+          </div>
+        </div>
+      
+        <div class="relative group rounded-lg overflow-hidden shadow-lg bg-white">
+          <img src="https://i.pinimg.com/736x/c1/e5/7b/c1e57bfb5d9d7619c3c9ab5723fe43f3.jpg" alt="Skincare" class="w-full h-64 object-cover transition-opacity duration-300 group-hover:opacity-0" />
+          <video
+            src="https://v1.pinimg.com/videos/mc/720p/c7/73/47/c773474adc2baa1818f10d496d73700b.mp4"
+            class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            autoplay
+            muted
+            loop
+            playsinline
+          ></video>
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-red-800/80 to-transparent p-4">
+            <h4 class="text-white font-semibold text-lg">Skincare</h4>
+          </div>
+        </div>
+        
+        <div class="relative group rounded-lg overflow-hidden shadow-lg bg-white">
+          <img src="https://i.pinimg.com/736x/f0/cb/2d/f0cb2d0f877c84e48a7051c96a87f9b7.jpg" alt="lipgloss" class="w-full h-64 object-cover transition-opacity duration-300 group-hover:opacity-0" />
+          <video
+            src="https://v1.pinimg.com/videos/mc/720p/9c/b9/9b/9cb99b468c005f8dd22b87b41cf6532c.mp4"
+            class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            autoplay
+            muted
+            loop
+            playsinline
+          ></video>
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-red-800/80 to-transparent p-4">
+            <h4 class="text-white font-semibold text-lg">Lipgloss</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Skincare Collection-->
+    <section class="w-full py-10 bg-white">
+  <h3 class="text-2xl font-bold text-center mb-6 text-red-700">Skincare Collection</h3>
+  <div class="relative">
+    <!-- Left Arrow -->
+    <button id="gallery-left" type="button" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white shadow p-2 rounded-full z-10 hover:bg-pink-100">
+      <svg class="w-8 h-8 text-red-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+    <!-- Right Arrow -->
+    <button id="gallery-right" type="button" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white shadow p-2 rounded-full z-10 hover:bg-pink-100">
+      <svg class="w-8 h-8 text-red-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+    <div id="gallery-scroll" class="flex gap-8 px-24 pb-4 scroll-smooth no-scrollbar overflow-x-auto">
+  <img src="https://i.pinimg.com/736x/a5/89/83/a58983ec9d91148cbde2129cbdf3b6da.jpg" alt="Gallery 1" class="h-[28rem] w-auto rounded-xl object-cover flex-shrink-0 transition-transform duration-500 hover:scale-150" />
+  <img src="https://i.pinimg.com/1200x/2b/eb/dc/2bebdc3463717752f0da3bfd960c390f.jpg" alt="Gallery 2" class="h-[28rem] w-auto rounded-xl object-cover flex-shrink-0 transition-transform duration-500 hover:scale-150" />
+  <img src="https://i.pinimg.com/1200x/cf/d1/85/cfd185d58d3968c1f3536ff03a5b89ff.jpg" alt="Gallery 3" class="h-[28rem] w-auto rounded-xl object-cover flex-shrink-0 transition-transform duration-500 hover:scale-150" />
+  <img src="https://i.pinimg.com/1200x/42/f6/23/42f623fb430d91a340665c69be27eea7.jpg" alt="Gallery 4" class="h-[28rem] w-auto rounded-xl object-cover flex-shrink-0 transition-transform duration-500 hover:scale-150" />
+  <img src="https://i.pinimg.com/736x/1f/e9/c9/1fe9c9e61eda55088a118b3db253b795.jpg" alt="Gallery 5" class="h-[28rem] w-auto rounded-xl object-cover flex-shrink-0 transition-transform duration-500 hover:scale-150" />
+  <img src="https://i.pinimg.com/1200x/0c/50/11/0c5011fbd9d7d5976856281de7f2f29a.jpg" alt="Gallery 6" class="h-[28rem] w-auto rounded-xl object-cover flex-shrink-0 transition-transform duration-500 hover:scale-150" />
+  <img src="https://i.pinimg.com/736x/33/c4/e5/33c4e5f2972c4c8737ac0bd5cb4bab78.jpg" alt="Gallery 7" class="h-[28rem] w-auto rounded-xl object-cover flex-shrink-0 transition-transform duration-500 hover:scale-150" />
+  <img src="https://i.pinimg.com/736x/2b/36/ff/2b36ff310e3ba3c1668a4e22e0b0bb52.jpg" alt="Gallery 8" class="h-[28rem] w-auto rounded-xl object-cover flex-shrink-0 transition-transform duration-500 hover:scale-150" />
+  <img src="https://i.pinimg.com/736x/f5/b3/f0/f5b3f0d2431a315d117c04a33e4798fa.jpg" alt="Gallery 9" class="h-[28rem] w-auto rounded-xl object-cover flex-shrink-0 transition-transform duration-500 hover:scale-150" />
+  <img src="https://i.pinimg.com/1200x/fe/b3/36/feb33628692e7bf20bbea21923db5412.jpg" alt="Gallery 10" class="h-[28rem] w-auto rounded-xl object-cover flex-shrink-0 transition-transform duration-500 hover:scale-150" />
+  <img src="https://i.pinimg.com/1200x/a6/c9/5a/a6c95aa530886871d054b8cbe3accab0.jpg" alt="Gallery 11" class="h-[28rem] w-auto rounded-xl object-cover flex-shrink-0 transition-transform duration-500 hover:scale-150" /> 
+  <img src="https://i.pinimg.com/1200x/fc/d5/82/fcd582c058d2d2c39990114e8ee66fdf.jpg" alt="Gallery 12" class="h-[28rem] w-auto rounded-xl object-cover flex-shrink-0 transition-transform duration-500 hover:scale-150" />
+  <img src="https://i.pinimg.com/1200x/40/47/96/404796b768e31e1bf80dcba4cf46c7a7.jpg" alt="Gallery 13" class="h-[28rem] w-auto rounded-xl object-cover flex-shrink-0 transition-transform duration-500 hover:scale-150" />
+</div>
+  </div>
+</section>
+<style>
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+</style>
+<script>
+  // Scroll 2 images at a time
+  const galleryScroll = document.getElementById('gallery-scroll');
+  const galleryImgs = galleryScroll.querySelectorAll('img');
+  const imgWidth = galleryImgs[0].offsetWidth + 32; // image width + gap (gap-8 = 2rem = 32px)
+  const scrollAmount = imgWidth * 2;
+
+  document.getElementById('gallery-left').onclick = () => {
+    galleryScroll.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  };
+  document.getElementById('gallery-right').onclick = () => {
+    galleryScroll.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  };
+</script>
+
+    <!-- About Section: Image on the left, text on the right -->
+<section id="about" class="w-full py-16 px-0 bg-white">
+  <div class="container mx-auto flex flex-col md:flex-row items-center justify-center gap-12 px-4">
+    <!-- Image Left -->
+    <div class="flex-shrink-0 w-full md:w-1/2 flex justify-center mb-8 md:mb-0">
+      <img 
+        src="https://scontent.fmnl13-3.fna.fbcdn.net/v/t39.30808-6/548460460_1525970412097256_4762612892317543212_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHiO7eOwlubNlHQfS7qh5nOUmgYmx_yb-VSaBibH_Jv5Xnw9hJzcaVjhgOwOUxoCG8kJGecdhWyyznMFybOFWxG&_nc_ohc=8XAxx6R_x1kQ7kNvwHkve7i&_nc_oc=Adne8ylxD66-DL9Lkn-Oidim8XtgitovhwlfKvI0RRAKCt7GwJxzhTXMIL_UQ9yNfpfHm4EzxI04O4Htg6zmSI7I&_nc_zt=23&_nc_ht=scontent.fmnl13-3.fna&_nc_gid=hbsKjdCZhjQ-ZXePUlGQnA&oh=00_AfaIASn_497EtyK3Vuc2IH7CgWlxvZMJbeGq6xsFwMMZeQ&oe=68CEC2ED" 
+        alt="About Ai' Cosmetics" 
+        class="rounded-2xl shadow-2xl w-full max-w-2xl h-[32rem] object-cover transition-transform duration-100 hover:scale-105 hover:shadow-pink-300 hover:shadow-2xl"
+      />
+    </div>
+    <!-- Text Right -->
+    <div class="w-full md:w-1/2 text-center md:text-left">
+      <h3 class="text-3xl font-bold mb-4 text-red-700">About Ai' Cosmetics</h3>
+      <p class="max-w-xl text-gray-600 text-lg leading-relaxed mx-auto md:mx-0">
+        At Ai' Cosmetics, we believe beauty is for everyone. Our mission is to
+        create high-quality, cruelty-free products that help you look and feel your best every day.
+      </p>
+    </div>
+  </div>
+</section>
+  
+    <section id="cart" class="bg-gray-100 py-16 px-4">
+      <h3 class="text-3xl font-bold text-center mb-6">Why Choose Ai' Cosmetics?</h3>
+      <div class="flex flex-wrap justify-center gap-8 mt-8">
+       
+        <div class="flex flex-col items-center group">
+          <span class="text-5xl text-pink-500 mb-2">
+            <i class="fa-solid fa-leaf"></i>
+          </span>
+          <span class="font-semibold text-gray-700">Paraben Free</span>
+        </div>
+        
+        <div class="flex flex-col items-center group">
+          <span class="text-5xl text-pink-500 mb-2">
+            <i class="fa-solid fa-seedling"></i>
+          </span>
+          <span class="font-semibold text-gray-700">Vegan</span>
+        </div>
+        
+        <div class="flex flex-col items-center group">
+          <span class="text-5xl text-pink-500 mb-2">
+            <i class="fa-solid fa-earth-asia"></i>
+          </span>
+          <span class="font-semibold text-gray-700">Sustainable</span>
+        </div>
+        
+        <div class="flex flex-col items-center group">
+          <span class="text-5xl text-pink-500 mb-2">
+            <i class="fa-solid fa-paw"></i>
+          </span>
+          <span class="font-semibold text-gray-700">Cruelty Free</span>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-white shadow py-8 mt-8">
+      <div class="container mx-auto text-center text-gray-500">
+        <p>&copy; 2025 Ai' Cosmetics. All rights reserved.</p>
+        <div class="flex justify-center space-x-3 mt-4">
+          <a href="#" class="text-pink-600 hover:text-pink-800 text-2xl" aria-label="Facebook">
+            <i class="fab fa-facebook-square"></i>
+          </a>
+          <a href="#" class="text-pink-600 hover:text-pink-800 text-2xl" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="text-pink-600 hover:text-pink-800 text-2xl" aria-label="TikTok">
+            <i class="fab fa-tiktok"></i>
+          </a>
+          <a href="#" class="text-pink-600 hover:text-pink-800 text-2xl" aria-label="Threads">
+            <i class="fa-brands fa-threads"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
