@@ -269,39 +269,33 @@
 </style>
 <script>
   const galleryScroll = document.getElementById('gallery-scroll');
-  const galleryImgs = galleryScroll.querySelectorAll('img');
-  const imgWidth = galleryImgs[0].offsetWidth + 32;
-  const scrollAmount = imgWidth * 2;
 
   galleryScroll.innerHTML += galleryScroll.innerHTML;
 
-  function autoScroll() {
-    if (galleryScroll.scrollLeft >= galleryScroll.scrollWidth / 2) {
-      galleryScroll.scrollLeft = 0;
+  let scrollSpeed = 1;
+  let isPaused = false;
+
+  function smoothScroll() {
+    if (!isPaused) {
+      galleryScroll.scrollLeft += scrollSpeed;
+
+      if (galleryScroll.scrollLeft >= galleryScroll.scrollWidth / 2) {
+        galleryScroll.scrollLeft = 0;
+      }
     }
-    galleryScroll.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+
+    requestAnimationFrame(smoothScroll);
   }
 
-  let autoScrollInterval = setInterval(autoScroll, 3000);
-
-  document.getElementById('gallery-left').onclick = () => {
-    if (galleryScroll.scrollLeft <= 0) {
-      galleryScroll.scrollLeft = galleryScroll.scrollWidth / 2;
-    }
-    galleryScroll.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-  };
-
-  document.getElementById('gallery-right').onclick = () => {
-    if (galleryScroll.scrollLeft >= galleryScroll.scrollWidth / 2) {
-      galleryScroll.scrollLeft = 0;
-    }
-    galleryScroll.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-  };
-
-  galleryScroll.addEventListener('mouseenter', () => clearInterval(autoScrollInterval));
-  galleryScroll.addEventListener('mouseleave', () => {
-    autoScrollInterval = setInterval(autoScroll, 2000);
+  galleryScroll.addEventListener("mouseenter", () => {
+    isPaused = true;
   });
+
+  galleryScroll.addEventListener("mouseleave", () => {
+    isPaused = false;
+  });
+  
+  smoothScroll();
 </script>
     <!-- About Section -->
 <section id="about" class="w-full py-16 px-0 bg-white">
