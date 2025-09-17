@@ -234,14 +234,14 @@
     <section class="w-full py-10 bg-white">
   <h3 class="text-2xl font-bold text-center mb-6 text-red-700">Skincare Collection</h3>
   <div class="relative">
-    <!-- Left Arrow -->
-    <button id="gallery-left" type="button" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white shadow p-2 rounded-full z-10 hover:bg-pink-100">
+
+    <button id="gallery-left" type="button" class="absolute left-2 top-1/2 -translate-y-1/2 shadow p-2 rounded-full z-10 hover:bg-pink-100">
       <svg class="w-8 h-8 text-red-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
       </svg>
     </button>
-    <!-- Right Arrow -->
-    <button id="gallery-right" type="button" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white shadow p-2 rounded-full z-10 hover:bg-pink-100">
+
+    <button id="gallery-right" type="button" class="absolute right-2 top-1/2 -translate-y-1/2 shadow p-2 rounded-full z-10 hover:bg-pink-100">
       <svg class="w-8 h-8 text-red-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
       </svg>
@@ -270,43 +270,43 @@
 <script>
   const galleryScroll = document.getElementById('gallery-scroll');
   const galleryImgs = galleryScroll.querySelectorAll('img');
-  const imgWidth = galleryImgs[0].offsetWidth + 32; // image width + gap
+  const imgWidth = galleryImgs[0].offsetWidth + 32;
   const scrollAmount = imgWidth * 2;
 
-  // Function to scroll right smoothly
+  galleryScroll.innerHTML += galleryScroll.innerHTML;
+
   function autoScroll() {
-    if (galleryScroll.scrollLeft + galleryScroll.clientWidth >= galleryScroll.scrollWidth) {
-      // If at the end, go back to start
-      galleryScroll.scrollTo({ left: 0, behavior: 'smooth' });
-    } else {
-      // Otherwise scroll right by 2 images
-      galleryScroll.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    if (galleryScroll.scrollLeft >= galleryScroll.scrollWidth / 2) {
+      galleryScroll.scrollLeft = 0;
     }
+    galleryScroll.scrollBy({ left: scrollAmount, behavior: 'smooth' });
   }
 
-  // Auto-scroll every 3 seconds
   let autoScrollInterval = setInterval(autoScroll, 3000);
 
-  // Optional: still allow manual button clicks
   document.getElementById('gallery-left').onclick = () => {
+    if (galleryScroll.scrollLeft <= 0) {
+      galleryScroll.scrollLeft = galleryScroll.scrollWidth / 2;
+    }
     galleryScroll.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
   };
+
   document.getElementById('gallery-right').onclick = () => {
+    if (galleryScroll.scrollLeft >= galleryScroll.scrollWidth / 2) {
+      galleryScroll.scrollLeft = 0;
+    }
     galleryScroll.scrollBy({ left: scrollAmount, behavior: 'smooth' });
   };
 
-  // Pause auto-scroll when mouse is over gallery
   galleryScroll.addEventListener('mouseenter', () => clearInterval(autoScrollInterval));
-  // Resume auto-scroll when mouse leaves
   galleryScroll.addEventListener('mouseleave', () => {
-    autoScrollInterval = setInterval(autoScroll, 3000);
+    autoScrollInterval = setInterval(autoScroll, 2000);
   });
 </script>
-
-    <!-- About Section: Image on the left, text on the right -->
+    <!-- About Section -->
 <section id="about" class="w-full py-16 px-0 bg-white">
   <div class="container mx-auto flex flex-col md:flex-row items-center justify-center gap-12 px-4">
-    <!-- Image Left -->
+    
     <div class="flex-shrink-0 w-full md:w-1/2 flex justify-center mb-8 md:mb-0">
       <img 
         src="https://scontent.fmnl13-3.fna.fbcdn.net/v/t39.30808-6/548460460_1525970412097256_4762612892317543212_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHiO7eOwlubNlHQfS7qh5nOUmgYmx_yb-VSaBibH_Jv5Xnw9hJzcaVjhgOwOUxoCG8kJGecdhWyyznMFybOFWxG&_nc_ohc=8XAxx6R_x1kQ7kNvwHkve7i&_nc_oc=Adne8ylxD66-DL9Lkn-Oidim8XtgitovhwlfKvI0RRAKCt7GwJxzhTXMIL_UQ9yNfpfHm4EzxI04O4Htg6zmSI7I&_nc_zt=23&_nc_ht=scontent.fmnl13-3.fna&_nc_gid=hbsKjdCZhjQ-ZXePUlGQnA&oh=00_AfaIASn_497EtyK3Vuc2IH7CgWlxvZMJbeGq6xsFwMMZeQ&oe=68CEC2ED" 
@@ -314,7 +314,7 @@
         class="rounded-2xl shadow-2xl w-full max-w-2xl h-[32rem] object-cover transition-transform duration-100 hover:scale-105 hover:shadow-pink-300 hover:shadow-2xl"
       />
     </div>
-    <!-- Text Right -->
+    
     <div class="w-full md:w-1/2 text-center md:text-left">
       <h3 class="text-3xl font-bold mb-4 text-red-700">About Ai' Cosmetics</h3>
       <p class="max-w-xl text-gray-600 text-lg leading-relaxed mx-auto md:mx-0">
